@@ -6,14 +6,22 @@
 
 // Per tutti i multipli di 3 e 5, deve scrivere FIZZBUZZ
 
+const answer = ''
 for (let i = 1; i <= 100 ; i++){
+    const ulElement = document.querySelector('ul');
+    const liElement = document.createElement ('li');
+    ulElement.append(liElement);
+    liElement.append(i);
+
+
     if(i%3 == 0 && i%5 == 0){
-        console.log('FizzBuzz');
+        answer.push('FizzBuzz');
     } else if (i%3 == 0){
-        console.log('FIZZ');
+        answer.push('FIZZ');
     } else if (i%5 == 0){
-        console.log('BUZZ');
+        answer.push('BUZZ');
     } else {
-        console.log(i)
+        answer.push(i)
     }
+    
 }

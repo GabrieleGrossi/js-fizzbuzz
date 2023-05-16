@@ -1,3 +1,15 @@
 .container{
     background-color:#1d9bf0;
 }
+
+.colorgreen{
+    color: green;
+}
+
+.coloryellow{
+    color: yellow;
+}
+
+.color.red{
+    color: red;
+}
