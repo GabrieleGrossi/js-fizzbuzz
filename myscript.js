@@ -5,23 +5,28 @@
 // Per tutti i multipli di 5, deve scrivere BUZZ
 
 // Per tutti i multipli di 3 e 5, deve scrivere FIZZBUZZ
+const ulElement = document.querySelector('ul');
 
-const answer = ''
 for (let i = 1; i <= 100 ; i++){
-    const ulElement = document.querySelector('ul');
+    
     const liElement = document.createElement ('li');
-    ulElement.append(liElement);
     liElement.append(i);
-
-
+    ulElement.appendChild(liElement);
+    
     if(i%3 == 0 && i%5 == 0){
-        answer.push('FizzBuzz');
+        console.log('FizzBuzz');
+        liElement.innerHTML = 'FizzBuzz'
+        liElement.classList.add('colorgreen')
     } else if (i%3 == 0){
-        answer.push('FIZZ');
+        console.log('FIZZ');
+        liElement.innerHTML = 'Fizz'
+        liElement.classList.add('coloryellow')
     } else if (i%5 == 0){
-        answer.push('BUZZ');
+        console.log('BUZZ');
+        liElement.innerHTML = 'Buzz'
+        liElement.classList.add('colorred')
     } else {
-        answer.push(i)
+        console.log(i)
     }
     
 }
